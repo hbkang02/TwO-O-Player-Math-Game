@@ -1,7 +1,7 @@
-require "./game.rb"
-require "./player.rb"
-require "./questions.rb"
+require "./game"
+require "./player"
+require "./questions"
 
 new_game = Game.new('New Game')
 
-new_game.start
+new_game.begin

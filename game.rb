@@ -1,4 +1,4 @@
-class game
+class Game
   def initialize(name)
     @name = name
     @player_1 = Player.new('Player 1')

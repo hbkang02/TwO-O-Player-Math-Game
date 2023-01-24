@@ -1,12 +1,14 @@
 class Player
 
+attr_reader :name, :lives
+
 def initialize(name)
   @name = name
-  @life = 3
+  @lives = 3
 end
 
 def lose_life
-  @lives -= 1
+  @lives = @lives - 1
 end
 
 def no_life
@@ -14,8 +16,8 @@ def no_life
 end
 
 def new_question
-  new_question=Question.new
-  new_question.ask_question(name)
+  new_question=Questions.new
+  new_question.ask_question(@name)
   print '>: '
   @guess = $stdin.gets.chomp
   if new_question.check_ans?(@guess.to_i)
@@ -24,7 +26,7 @@ def new_question
     puts 'Seriously? No!'
     lose_life
   end
-
+end
 end
 
 
