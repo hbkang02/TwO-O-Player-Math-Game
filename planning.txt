@@ -1,0 +1,5 @@
+# class = player, questions, game
+
+# player: player start life, player#, player current life, player lose life
+# questions: ask question, check answer
+# game: player score, winner
